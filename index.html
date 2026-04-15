@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Psicólogo & Web Dev | Link in Bio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#fbf8ff",
+                        "tertiary-dim": "#66496e",
+                        "on-error": "#fff7f7",
+                        "inverse-primary": "#8c95fb",
+                        "inverse-on-surface": "#9e9ca2",
+                        "on-tertiary-fixed-variant": "#6b4d73",
+                        "on-tertiary-container": "#614469",
+                        "surface-dim": "#dbd9e4",
+                        "surface-tint": "#4c55b6",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-low": "#f5f2fb",
+                        "on-primary-fixed-variant": "#0f187f",
+                        "on-primary-container": "#000577",
+                        "secondary-fixed-dim": "#ffc7c4",
+                        "on-surface-variant": "#5f5e68",
+                        "error-container": "#f97386",
+                        "tertiary-fixed": "#f6d0fd",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#4c55b6",
+                        "on-tertiary": "#fff7fb",
+                        "on-tertiary-fixed": "#4d3155",
+                        "primary-container": "#8c95fb",
+                        "on-secondary-container": "#9c2229",
+                        "surface-container-highest": "#e3e1ed",
+                        "tertiary": "#72547a",
+                        "surface-variant": "#e3e1ed",
+                        "on-background": "#32323b",
+                        "surface-container-high": "#e9e7f1",
+                        "on-secondary": "#fff7f6",
+                        "inverse-surface": "#0e0e12",
+                        "on-surface": "#32323b",
+                        "primary-fixed": "#8c95fb",
+                        "secondary-fixed": "#ffdad8",
+                        "surface-container": "#efecf6",
+                        "tertiary-container": "#f6d0fd",
+                        "on-secondary-fixed-variant": "#aa2c32",
+                        "surface": "#fbf8fe",
+                        "secondary": "#af3035",
+                        "error-dim": "#6b0221",
+                        "secondary-container": "#ffdad8",
+                        "primary-fixed-dim": "#7f88ec",
+                        "tertiary-fixed-dim": "#e8c3ef",
+                        "outline-variant": "#b2b1bc",
+                        "surface-bright": "#fbf8fe",
+                        "secondary-dim": "#9e232a",
+                        "outline": "#7a7a84",
+                        "on-error-container": "#6e0523",
+                        "background": "#fbf8fe",
+                        "primary-dim": "#4048a9",
+                        "on-secondary-fixed": "#810b19",
+                        "error": "#a8364b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(180deg, #fbf8fe 0%, #efecf6 100%);
+            min-height: max(884px, 100dvh);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(24px);
+        }
+
+        .tonal-carving-no-borders {
+            border: none !important;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen text-on-surface flex flex-col items-center bg-surface">
+    <!-- TopAppBar -->
+    <header
+        class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 max-w-lg mx-auto w-full bg-[#fbf8fe]/60 backdrop-blur-2xl rounded-full mt-4 mx-4 shadow-[0_8px_32px_rgba(50,50,59,0.06)] tonal-carving-no-borders">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center shadow-md">
+                <span class="text-on-primary font-serif font-bold text-lg leading-none mt-[2px]">Ψ</span>
+            </div>
+            <span class="text-lg font-bold text-[#32323b] font-['Plus_Jakarta_Sans'] tracking-[-0.02em]">Psicólogo &amp;
+                Web Dev</span>
+        </div>
+        <button onclick="copyLink(event)"
+            class="text-[#4c55b6] hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+            <span class="material-symbols-outlined" data-icon="share">share</span>
+        </button>
+    </header>
+    <main class="w-full max-w-lg px-6 pt-12 pb-24 flex flex-col items-center relative">
+        <!-- Profile Section -->
+        <div class="relative mb-8 flex flex-col items-center text-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary to-primary-container shadow-xl mb-6">
+                <div class="w-full h-full rounded-full overflow-hidden border-4 border-surface">
+                    <img alt="Profile Headshot" class="w-full h-full object-cover"
+                        src="./img/FB_IMG_1767421604394.jpg" />
+                </div>
+            </div>
+            <h1 class="text-3xl font-extrabold tracking-[-0.03em] text-on-surface mb-2">Carlos Molina</h1>
+            <p class="text-on-surface-variant leading-relaxed max-w-xs font-medium">
+                Estudiante de Psicología · Desarrollador Web · Técnico en Computación · Osint Specialist
+            </p>
+        </div>
+
+        <!-- Social Links Cluster -->
+        <div class="w-full space-y-4">
+            <!-- Facebook -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="https://web.facebook.com/carlosmolina.contact" target="_blank">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-brands fa-facebook text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Facebook</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Conecta
+                            conmigo</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Instagram -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="https://www.instagram.com/c.arl0s_m/" target="_blank">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Instagram</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Visual
+                            Journal</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Threads -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="https://www.threads.com/@c.arl0s_m" target="_blank">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-brands fa-threads text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Threads</span>
+                        <span
+                            class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Poco uso</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="https://www.linkedin.com/in/carlos-molina-villacorta/" target="_blank">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-brands fa-linkedin hover:text-[#0a66c2] transition-colors text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">LinkedIn</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Red
+                            Profesional</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Github -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="https://github.com/carlosm-lab" target="_blank">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">GitHub</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Mis
+                            Repositorios</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Correo -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="mailto:carlosmolina.contact@gmail.com">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-envelope text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Correo Electrónico</span>
+                        <span
+                            class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Contáctame</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="#" onclick="openWhatsAppHandler('50374059967', event)">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">WhatsApp</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Mensaje
+                            Directo</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- X -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="#"
+                onclick="openModal('En Proceso', 'Mi perfil de X (Twitter) está aún en proceso de creación.', event)">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-brands fa-x-twitter text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">X (Twitter)</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">En
+                            proceso</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Sobre mi -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="https://carlosmolina.vercel.app/" target="_blank">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-user text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Sobre Mí</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Conoce mi
+                            perfil</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Mis servicios -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="#"
+                onclick="openModal('En Desarrollo', 'CódigoSV, mi sitio web de servicios de desarrollo, se encuentra actualmente en desarrollo.', event)">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-laptop-code text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Mis Servicios</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Servicios de
+                            desarrollo</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Mi proyecto -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="#"
+                onclick="openModal('En Desarrollo', 'Nexus Ciencia, un repositorio sobre psicología científica, se encuentra actualmente en desarrollo.', event)">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-flask text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Mi Proyecto</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Psicología
+                            científica</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Mi taller -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="#"
+                onclick="openModal('En Desarrollo', 'Confecciones Liss, un taller especializado en la elaboración de uniformes universitarios para el área de salud y scrubs médicos, se encuentra actualmente en desarrollo.', event)">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-shirt text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Mi Taller</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Uniformes y
+                            scrubs médicos</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+            <!-- Mi tienda -->
+            <a class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(50,50,59,0.04)] hover:shadow-[0_8px_32px_rgba(50,50,59,0.08)] transition-all duration-300 active:scale-[0.98]"
+                href="#"
+                onclick="openModal('En Desarrollo', 'Kairo Boutique, un e-commerce de productos variados para la oficina y la casa, se encuentra actualmente en desarrollo.', event)">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-shop text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-on-surface">Mi Tienda</span>
+                        <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Productos
+                            para oficina y casa</span>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors"
+                    data-icon="arrow_forward_ios">arrow_forward_ios</span>
+            </a>
+
+        </div>
+
+        <!-- Featured Card (Bento Style) -->
+        <div class="w-full mt-12 bg-primary-container rounded-lg p-6 relative overflow-hidden group shadow-lg">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-50"></div>
+            <div class="relative z-10 flex flex-col gap-4">
+                <span
+                    class="inline-flex items-center px-3 py-1 bg-on-primary/20 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest text-on-primary w-fit">Beta
+                    Privada</span>
+                <h3 class="text-2xl font-bold text-on-primary-container leading-tight">Link Social Drop</h3>
+                <p class="text-on-primary-container/80 text-sm font-medium">Una herramienta alternativa gratuita de link
+                    in bio. Actualmente se encuentra en etapa de desarrollo, regístrate para usarla y reportar bugs.</p>
+                <button
+                    onclick="openModal('Acceso Anticipado', 'Este proyecto se encuentra en Beta Privada. Por favor, contáctame para obtener acceso anticipado y ayudar a reportar detalles o bugs.', event)"
+                    class="mt-2 w-full py-4 bg-on-primary-container text-on-primary rounded-xl font-bold transition-transform active:scale-95 shadow-lg">Obtener
+                    Acceso</button>
+            </div>
+            <div
+                class="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex flex-col items-center justify-center w-full mt-auto pb-8 pt-4 bg-transparent text-center">
+        <div class="px-4 py-2 rounded-xl bg-surface-container-highest/50 backdrop-blur-md shadow-sm border border-outline-variant/30 flex items-center gap-1 font-mono text-xs shadow-[0_4px_12px_rgba(50,50,59,0.05)] transition-transform hover:scale-105 cursor-default">
+            <span class="text-outline font-medium">&lt;</span><span class="text-primary font-bold">Desarrollado</span>
+            <span class="text-secondary-dim font-medium ml-1">por=</span><span class="text-[#0ea5e9]">"Carlos Molina"</span><span class="text-outline font-medium ml-1">/&gt;</span>
+        </div>
+    </footer>
+
+    <!-- Reusable Modal (Hidden Default) -->
+    <div id="modal"
+        class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+        <div class="bg-surface rounded-2xl p-6 max-w-sm w-full shadow-2xl transform transition-all text-center">
+            <h3 id="modal-title" class="text-xl font-bold text-on-surface mb-3">Aviso</h3>
+            <p id="modal-desc" class="text-on-surface-variant mb-6 font-medium text-sm leading-relaxed"></p>
+            <button onclick="closeModal()"
+                class="w-full py-3 bg-primary text-on-primary rounded-xl font-bold shadow-md active:scale-95 transition-transform">Entendido</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, text, event) {
+            if (event) event.preventDefault();
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = text;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        function openWhatsAppHandler(phone, event) {
+            if (event) event.preventDefault();
+            // Detect if the user is on a mobile device
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // Force open the native app on mobile, bypassing the preview page
+                window.location.href = `whatsapp://send?phone=${phone}`;
+            } else {
+                // On desktop, the standard api link is safer to offer WhatsApp Web or Desktop App options
+                window.open(`https://api.whatsapp.com/send?phone=${phone}`, '_blank');
+            }
+        }
+    </script>
+
+    <!-- Small Toast Modal for Copy Link -->
+    <div id="toast" class="hidden fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-6 py-3 rounded-full shadow-2xl text-sm font-semibold z-[110] transition-all duration-300 opacity-0 translate-y-4 flex items-center gap-2 border border-white/10">
+        <i class="fa-solid fa-check-circle text-[#10b981] text-lg"></i>
+        <span>Enlace copiado</span>
+    </div>
+
+    <script>
+        function copyLink(event) {
+            if (event) event.preventDefault();
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.remove('hidden');
+                // Trigger reflow
+                void toast.offsetWidth;
+                toast.classList.remove('opacity-0', 'translate-y-4');
+                toast.classList.add('opacity-100', 'translate-y-0');
+                
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100', 'translate-y-0');
+                    toast.classList.add('opacity-0', 'translate-y-4');
+                    setTimeout(() => toast.classList.add('hidden'), 300);
+                }, 2500);
+            }).catch(err => {
+                console.error('Error al copiar el enlace', err);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
